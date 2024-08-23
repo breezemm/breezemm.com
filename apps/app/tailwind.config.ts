@@ -13,10 +13,13 @@ const config: Config = {
       primary: "#323334",
       neutral: {
         1: "#FCFCFC",
+        5: "#CECECE",
         7: "#646668",
         9: "#323334",
         10: "#191A1A",
       },
+
+      red: "#E51A2B",
       overlaycolor: "#7D808266",
       green: {
         6: "#6DB24D",
