@@ -16,11 +16,11 @@ const TimeLinePost = (props: { data: TimeLineProps }) => {
       <div className="flex flex-1 flex-col gap-4">
         <div>
           <p className="text-neutral-10 font-semibold">
-            {props.data.user.name}
+            {props.data.user.nickname}
           </p>
-          <p className="text-neutral-8">5m</p>
+          <p className="text-neutral-8">{props.data.user.time}</p>
         </div>
-        <p className="text-neutral-10">breeze is finally OUT OF THE LAB.</p>
+        <p className="text-neutral-10">{props.data.description}</p>
 
         <Card className=" w-full md:w-[278px]">
           <CardHeader className="p-0">
@@ -28,37 +28,35 @@ const TimeLinePost = (props: { data: TimeLineProps }) => {
           </CardHeader>
 
           <CardContent className="p-2">
-            <p className="text-neutral-10 font-semibold">
-              breeze PUBLIC Launch
-            </p>
+            <p className="text-neutral-10 font-semibold">{props.data.name}</p>
           </CardContent>
 
           <CardFooter className="flex justify-between ps-2 pe-2 pb-2">
-            <p className="text-neutral-10">1 Mar (Tue)</p>
-            <p className="text-neutral-10 font-semibold">FREE</p>
+            <p className="text-neutral-10">{props.data.start_date}</p>
+            <p className="text-neutral-10 font-semibold">{props.data.status}</p>
           </CardFooter>
         </Card>
 
-        <PostFooter />
+        <PostFooter key={props.data.id} data={props.data} />
       </div>
     </div>
   );
 };
 export default TimeLinePost;
-const PostFooter = () => {
+const PostFooter = (props: { data: TimeLineProps }) => {
   return (
     <div className="flex justify-between">
       <div className="flex gap-1 items-center">
         <HeartIcon />
-        <p>1000</p>
+        <p>{props.data.likers_count}</p>
       </div>
-      <div className="flex gap-1 items-center">
+      {/* <div className="flex gap-1 items-center">
         <MessageIcon />
         <p>68</p>
-      </div>
-      <div>
+      </div> */}
+      {/* <div>
         <SaveIcon />
-      </div>
+      </div> */}
     </div>
   );
 };

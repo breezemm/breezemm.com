@@ -1,31 +1,31 @@
 {
-  "name": "breeze",
   "private": true,
   "type": "module",
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
+    "start": "turbo start",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prepare": "husky"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.2.1",
-    "@commitlint/config-conventional": "^19.1.0",
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
-    "@types/bun": "^1.0.12",
-    "eslint": "^9.0.0",
-    "husky": "^9.0.11",
-    "prettier": "^3.2.5",
+    "@types/bun": "^1.1.14",
+    "eslint": "^9.15.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.4.1",
     "turbo": "latest"
   },
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "bun@1.1",
+  "packageManager": "bun@1.1.32",
   "workspaces": [
-    "apps/*",
+    "apps/app-marketing",
     "packages/*"
   ]
 }

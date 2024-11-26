@@ -13,50 +13,50 @@ import AppleStore from "@/app/assets/apple_store.svg";
 import GoogleStore from "@/app/assets/google_store.svg";
 
 export const ContactInfoData: ContactInfo[] = [
-  {
-    icon: <BiWorld />,
-    text: "breezemm.com",
-  },
+  // {
+  //   icon: <BiWorld />,
+  //   text: "www.breezemm.com",
+  // },
   {
     icon: <FaPhoneAlt />,
     text: "09 - 443 111 017",
   },
   {
     icon: <MdEmail />,
-    text: "customerservice@breezemm.com",
+    text: "care@breezemm.com",
   },
 ];
 
 export const SocialList: SocialInfo[] = [
   {
     icon: <MdFacebook className="h-8 w-8" />,
-    link: "https://www.facebook.com/breezeapplication",
+    link: "https://www.facebook.com/techbreezemm",
   },
-  {
-    icon: <FaInstagram className="h-8 w-8" />,
-    link: "https://www.instagram.com/",
-  },
-  {
-    icon: <FaLinkedin className="h-8 w-8" />,
-    link: "https://www.linkedin.com",
-  },
-  {
-    icon: <TikTokLogo />,
-    link: "https://www.tiktok.com",
-  },
-  {
-    icon: <FaTelegram className="h-8 w-8" />,
-    link: "https://www.telegram.com",
-  },
+  // {
+  //   icon: <FaInstagram className="h-8 w-8" />,
+  //   link: "https://www.instagram.com/",
+  // },
+  // {
+  //   icon: <FaLinkedin className="h-8 w-8" />,
+  //   link: "https://www.linkedin.com",
+  // },
+  // {
+  //   icon: <TikTokLogo />,
+  //   link: "https://www.tiktok.com",
+  // },
+  // {
+  //   icon: <FaTelegram className="h-8 w-8" />,
+  //   link: "https://www.telegram.com",
+  // },
 ];
 
 export const Stores: SocialInfo[] = [
-  {
-    icon: AppleStore,
-    link: "https://www.apple.com",
-  },
-  {
-    icon: GoogleStore,
-    link: "https://www.google.com",
-  },
+  // {
+  //   icon: AppleStore,
+  //   link: "https://www.apple.com",
+  // },
+  // {
+  //   icon: GoogleStore,
+  //   link: "https://www.google.com",
+  // },
 ];

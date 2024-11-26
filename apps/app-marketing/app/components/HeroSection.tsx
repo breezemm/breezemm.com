@@ -29,7 +29,7 @@ const HeroSection = () => {
             </h3>
             <p className="mb-4">Only in 3 mins. For Real. No Cap.</p>
           </div>
-          <div className="relative mb-4">
+          <div className="relative mb-4 z-0">
             <a
               href="#"
               className="bg-primary text-neutral-1 block w-full rounded-md py-3 text-center"

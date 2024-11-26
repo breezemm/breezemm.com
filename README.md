@@ -30,7 +30,7 @@ For more information, please refer to the [Turbo Repo](https://turbo.build/repo)
 A big round of applause for our interns, juniors and mid seniors developers who have shown dedication, creativity, and teamwork. Your contributions make a difference!
 
 - [Kaung Myat Thu](https://github.com/kaungmyatthu69)
-- [Ngwe Sin Sandar](https://github.com/orgs/myanmarcyberyouths/people/ngwesinsandar2)
+- [Ngwe Sin Sandar](https://github.com/ngwesinsandar2)
 - [Kyaw San Maung](https://github.com/Kyaw-San-Maung)
 - [Min Khant](https://github.com/Rayy-007)
 - [Yell Min Thu](https://github.com/JunHaoyell)
