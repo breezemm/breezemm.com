@@ -14,10 +14,13 @@
     "typescript": "^5.7.2"
   },
   "packageManager": "npm@10.7.0",
+  "engines": {
+    "npm": ">=10.7.0",
+    "node": ">=18.0.0"
+  },
   "name": "@breezemm/root",
   "workspaces": [
-    "apps/*",
-    "packages/*"
+    "apps/*"
   ],
   "overrides": {
     "next": "14.2.6"
