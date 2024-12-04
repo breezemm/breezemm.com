@@ -1,11 +1,25 @@
 {
-  "name": "breezemm.com",
-  "module": "index.ts",
-  "type": "module",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "turbo run build --filter=@breezemm/event-planning",
+    "dev": "turbo run dev --filter=@breezemm/event-planning",
+    "start": "turbo run start --filter=@breezemm/event-planning"
+  },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "turbo": "^1.13.4"
   },
   "peerDependencies": {
-    "typescript": "^5.0.0"
+    "typescript": "^5.7.2"
+  },
+  "packageManager": "npm@10.7.0",
+  "name": "@breezemm/root",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "overrides": {
+    "next": "14.2.6"
   }
 }
