@@ -13,7 +13,7 @@ const Navbar = () => {
 
     return (
         <React.Fragment>
-            <nav className="flex items-center justify-between py-[16px] px-[24px] md:py-[24px] md:px-[40px]">
+            <nav className="flex sticky top-0 bg-white/50 z-20 shadow-sm backdrop-blur-md items-center justify-between py-[16px] px-[24px] md:py-[24px] md:px-[40px]">
                 <Link href="/">
                     <BreezeLogo />
                 </Link>
