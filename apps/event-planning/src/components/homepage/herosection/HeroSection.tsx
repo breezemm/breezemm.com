@@ -1,3 +1,4 @@
+import React from "react";
 import EventContentSection from "./EventContentSection";
 import EventFeatures from "./EventFeatures";
 

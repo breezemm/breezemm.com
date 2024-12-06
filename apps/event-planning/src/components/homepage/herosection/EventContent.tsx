@@ -1,3 +1,4 @@
+import React from "react";
 import magnifyingGlass from "../../../icons/magnifying-glass.svg";
 import celebrate from "../../../icons/celebrate.svg";
 import Image from "next/image";
@@ -28,7 +29,7 @@ const EventContent = () => {
             <h2 className="font-[700] text-[32px] leading-[40px] tracking-[-0.026em]">
                 <Image
                     src={celebrate}
-                    alt="celerate icon"
+                    alt="celebrate icon"
                     className="inline mr-[8px]"
                 />
                 Create events

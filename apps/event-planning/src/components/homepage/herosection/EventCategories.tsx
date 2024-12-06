@@ -1,8 +1,7 @@
+import React from "react";
 import Image from "next/image";
 import { Figtree } from "next/font/google";
 import { eventCategories } from "../../../CONSTANTS";
-import axios, { AxiosError } from "axios";
-import { headers } from "next/headers";
 import { httpClient } from "../../../utils/httpClient";
 
 const figtree = Figtree({ weight: ["300", "500", "600"], subsets: ["latin"] });
@@ -11,20 +10,18 @@ type CategoriesModel = {
     id: number;
     name: string;
     icon_path: string;
-}
+};
 
 type ResponseModel = {
-    data: CategoriesModel[]
-}
+    data: CategoriesModel[];
+};
 
 const getData = async () => {
-    return await httpClient.get<ResponseModel>('/interests')
-}
-
+    return await httpClient.get<ResponseModel>("/interests");
+};
 
 const EventCategories = async () => {
-    const data = await getData()
-    console.log(data.data)
+    const data = await getData();
     return (
         <div className="md:w-[431px] h-[460px] px-[24px] flex gap-[14px] md:gap-[26px] justify-center flex-wrap">
             {eventCategories &&

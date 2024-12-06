@@ -1,3 +1,4 @@
+import React from "react";
 import EventCategories from "./EventCategories";
 import EventContent from "./EventContent";
 import EventContentCTA from "./EventContentCTA";

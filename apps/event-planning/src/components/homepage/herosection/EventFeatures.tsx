@@ -1,3 +1,4 @@
+import React from "react";
 import Image from "next/image";
 import checkIcon from "../../../icons/check-icon.svg";
 import BreezeButton from "../../../ui/BreezeButton";
