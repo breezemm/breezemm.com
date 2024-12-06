@@ -3,9 +3,9 @@ import Link from "next/link";
 
 import breezeHLogo from "../../../icons/breeze-h-logo.svg";
 import appStoreSVG from "../../../icons/apple-store.svg";
-import goolePlayStoreSVG from "../../../icons/google-play-store.svg";
+import googlePlayStoreSVG from "../../../icons/google-play-store.svg";
 
-import { contactInfo, socialMedieas } from "../../../CONSTANTS";
+import { contactInfo, socialMedias } from "../../../CONSTANTS";
 
 const Footer = () => {
     return (
@@ -46,14 +46,14 @@ const Footer = () => {
                         className="w-auto h-auto"
                     />
                     <Image
-                        src={goolePlayStoreSVG}
+                        src={googlePlayStoreSVG}
                         alt="google play store"
                         className="w-auto h-auto"
                     />
                 </div>
 
                 <div className="flex gap-[40px] items-center">
-                    {socialMedieas.map((s, i) => (
+                    {socialMedias.map((s, i) => (
                         <Image
                             key={i}
                             src={s}

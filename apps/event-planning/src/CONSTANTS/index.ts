@@ -70,7 +70,7 @@ export const contactInfo = [
     { icon: emailIcon, text: "customerservice@breezemm.com" },
 ];
 
-export const socialMedieas = [
+export const socialMedias = [
     facebookIcon,
     instagramIcon,
     linkedInIcon,

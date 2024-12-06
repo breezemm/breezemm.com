@@ -51,7 +51,7 @@ const EventFeatures = () => {
 
             <div className="flex text-[16px] w-[328px] md:w-auto font-[400] leading-[24px] flex-col items-center relative gap-[24px] border-2 border-[#323334] rounded-[16px] py-[40px] px-[24px] ">
                 <BreezeButton className="p-[8px] w-[180px] h-[40px] absolute top-0 left-[50%] translate-x-[-50%] translate-y-[-50%]">
-                    I organise events.
+                    I organize events.
                 </BreezeButton>
                 <div className="">
                     <div className="flex px-[16px] py-[8px] items-center gap-[16px] ">
