@@ -6,10 +6,29 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "^14.2.6",
-    "react": "^18.3.1"
+    "@million/lint": "^1.0.13",
+    "next": "15.0.4",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
   },
   "devDependencies": {
-    "@types/react": "^18.3.12"
+    "@eslint/js": "^9.16.0",
+    "@types/bun": "latest",
+    "@types/react": "19.0.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.16.0",
+    "eslint-plugin-react": "^7.37.2",
+    "globals": "^15.13.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16",
+    "typescript-eslint": "^8.17.0"
+  },
+  "overrides": {
+    "@types/react": "19.0.0"
+  },
+  "module": "index.ts",
+  "type": "module",
+  "peerDependencies": {
+    "typescript": "^5.0.0"
   }
 }
