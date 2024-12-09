@@ -6,7 +6,7 @@ export const MDXComponents = {
     h1: ({ className, ...props }) => (
         <h1
             className={cn(
-                "mt-2  text-[32px] font-bold tracking-tighter",
+                "my-10  text-[32px] font-bold tracking-tighter",
                 className
             )}
             {...props}
@@ -15,7 +15,7 @@ export const MDXComponents = {
     h2: ({ className, ...props }) => (
         <h2
             className={cn(
-                "mt-10 border-b pb-1 text-[18px] font-semibold tracking-tighter	 first:mt-0",
+                "mt-10 pb-1 text-[18px] font-[700] tracking-tighter first:mt-0",
                 className
             )}
             {...props}
@@ -60,7 +60,7 @@ export const MDXComponents = {
     a: ({ className, ...props }) => (
         <a
             className={cn(
-                "font-medium underline underline-offset-4",
+                "font-medium underline text-blue-500 underline-offset-4",
                 className
             )}
             {...props}
@@ -68,7 +68,10 @@ export const MDXComponents = {
     ),
     p: ({ className, ...props }) => (
         <p
-            className={cn("leading-7 [&:not(:first-child)]:mt-6", className)}
+            className={cn(
+                "tracking-tighter leading-[24px] text-[16px]",
+                className
+            )}
             {...props}
         />
     ),
@@ -82,7 +85,10 @@ export const MDXComponents = {
         <li className={cn("mt-2", className)} {...props} />
     ),
     strong: ({ className, ...props }) => (
-        <strong className={(cn("ml-20"), className)} {...props} />
+        <strong
+            className={cn("ml-[20px] font-semibold", className)}
+            {...props}
+        />
     ),
     blockquote: ({ className, ...props }) => (
         <blockquote
@@ -104,7 +110,7 @@ export const MDXComponents = {
             {...props}
         />
     ),
-    hr: ({ ...props }) => <hr className="my-4 md:my-8" {...props} />,
+    // hr: ({ ...props }) => <hr className="my-4 md:my-8" {...props} />,
     table: ({
         className,
         ...props

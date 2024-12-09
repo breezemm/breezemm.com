@@ -61,7 +61,9 @@ const page = async ({ params }: { params: { slug: string } }) => {
         const { content } = await getMdxData(slug);
         return (
             <div className="flex justify-center items-center mb-[260px] mt-[80px]">
-                <div className={`${figtree.className} md:w-[991px] w-full p-4`}>
+                <div
+                    className={`${figtree.className} text-[#191A1A] md:w-[991px] w-full p-4`}
+                >
                     {content}
                 </div>
             </div>
