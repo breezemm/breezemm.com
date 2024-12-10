@@ -2,9 +2,9 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 
-import appleStore from "../../icons/apple-store.svg";
-import closeIcon from "../../icons/close-icon.svg";
-import googlePlayStore from "../../icons/google-play-store.svg";
+import appleStore from "../../icons/app-store-icons/apple-store.svg";
+import googlePlayStore from "../../icons/app-store-icons/google-play-store.svg";
+import closeIcon from "../../icons/assets-icons/close-icon.svg";
 
 type ModalProps = {
     onClose: () => void;

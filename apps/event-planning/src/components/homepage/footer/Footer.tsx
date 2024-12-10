@@ -1,12 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-
-import breezeHLogo from "../../../icons/breeze-h-logo.svg";
-import appStoreSVG from "../../../icons/apple-store.svg";
-import googlePlayStoreSVG from "../../../icons/google-play-store.svg";
-
-import { contactInfo, socialMedias } from "../../../CONSTANTS";
+import breezeHLogo from "../../../icons/breeze-logos/breeze-h-logo.svg";
+import { appStoreIcons, contactInfo, socialMedias } from "../../../CONSTANTS";
 
 const Footer = () => {
     return (
@@ -24,7 +20,10 @@ const Footer = () => {
                 {/* Contact Info  */}
                 <div className="flex flex-col gap-[8px]">
                     {contactInfo.map((c) => (
-                        <div key={c.text} className="flex gap-[16px] p-[8px]">
+                        <div
+                            key={c.text}
+                            className="flex gap-[16px] items-center p-[8px]"
+                        >
                             <div className="w-[19px] h-[19px]">
                                 <Image
                                     src={c.icon}
@@ -41,16 +40,14 @@ const Footer = () => {
             {/* app download and social media */}
             <div className="flex flex-col lg:items-end items-center gap-[72px] md:gap-[40px]">
                 <div className="flex gap-[16px] items-center">
-                    <Image
-                        src={appStoreSVG}
-                        alt="app store"
-                        className="w-auto h-auto"
-                    />
-                    <Image
-                        src={googlePlayStoreSVG}
-                        alt="google play store"
-                        className="w-auto h-auto"
-                    />
+                    {appStoreIcons.map((store) => (
+                        <Image
+                            key={store.alt}
+                            src={store.src}
+                            alt={store.alt}
+                            className="w-auto h-auto"
+                        />
+                    ))}
                 </div>
 
                 <div className="flex gap-[40px] items-center">

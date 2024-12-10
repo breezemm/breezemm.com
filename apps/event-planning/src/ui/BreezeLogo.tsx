@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import breezeLogoTest from "../icons/Breeze-app-logo-test.svg";
+import breezeLogoTest from "../icons/breeze-logos/Breeze-app-logo.svg";
 
 const BreezeLogo = () => {
     return (

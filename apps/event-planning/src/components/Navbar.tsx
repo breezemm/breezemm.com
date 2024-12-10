@@ -5,36 +5,57 @@ import Image from "next/image";
 
 import BreezeLogo from "../ui/BreezeLogo";
 import BreezeButton from "../ui/BreezeButton";
-import downloadIcon from "../icons/download-icon.svg";
+
+import downloadIcon from "../icons/assets-icons/download-icon.svg";
 import Modal from "./models/Modal";
+import { usePathname } from "next/navigation";
+import AppNavigation from "./publicTimeline/AppNavigation";
 
 const Navbar = () => {
     const [openModal, setOpenModal] = useState(false);
 
-    const memoizedBreezeButton = useMemo(() => (
-        <BreezeButton
-            onClick={() => setOpenModal(true)}
-            className="hidden md:block w-[170px] py-[10px] px-[32px] font-[600] h-[44px]"
-        >
-            Download Free
-        </BreezeButton>
-    ), [setOpenModal]);
+    const path = usePathname();
 
-    const memoizedImage = useMemo(() => (
-        <Image
-            src={downloadIcon}
-            alt="download icon"
-            width={24}
-            height={24}
-        />
-    ), [downloadIcon]);
+    const memoizedBreezeButton = useMemo(
+        () => (
+            <BreezeButton
+                onClick={() => setOpenModal(true)}
+                className="hidden md:block w-[170px] py-[10px] px-[32px] font-[600] h-[44px]"
+            >
+                Download Free
+            </BreezeButton>
+        ),
+        [setOpenModal]
+    );
+
+    const memoizedImage = useMemo(
+        () => (
+            <Image
+                src={downloadIcon}
+                alt="download icon"
+                width={24}
+                height={24}
+            />
+        ),
+        [downloadIcon]
+    );
 
     return (
         <React.Fragment>
+            {/* mobile app navigation   */}
+            {path === "/public-timeline" && (
+                <AppNavigation className="flex md:hidden justify-center items-center gap-10 py-2 px-6 w-full fixed bottom-0 pb-10 bg-white border-t" />
+            )}
+
             <nav className="flex sticky top-0 bg-white/50 z-20 shadow-sm backdrop-blur-md items-center justify-between py-[16px] px-[24px] md:py-[24px] md:px-[40px]">
                 <Link href="/">
                     <BreezeLogo />
                 </Link>
+
+                {/* App Navigation  */}
+                {path === "/public-timeline" && (
+                    <AppNavigation className="hidden md:flex items-center gap-10 px-8 h-full" />
+                )}
 
                 {memoizedBreezeButton}
 

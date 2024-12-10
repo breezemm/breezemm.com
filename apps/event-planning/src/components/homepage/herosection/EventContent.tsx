@@ -1,6 +1,6 @@
 import React from "react";
-import magnifyingGlass from "../../../icons/magnifying-glass.svg";
-import celebrate from "../../../icons/celebrate.svg";
+import magnifyingGlass from "../../../icons/assets-icons/magnifying-glass.svg";
+import celebrate from "../../../icons/assets-icons/celebrate.svg";
 import Image from "next/image";
 
 import { Sora } from "next/font/google";
