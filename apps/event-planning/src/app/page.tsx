@@ -1,3 +1,4 @@
+import React from "react";
 import HeroSection from "../components/homepage/herosection/HeroSection";
 import BreezeButton from "../ui/BreezeButton";
 import arrowRight from "../icons/arrow-right.svg";

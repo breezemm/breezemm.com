@@ -1,8 +1,8 @@
 import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from "axios";
 
 export const axiosBase = axios.create({
-    baseURL: "https://api-sta.breezemm.com/v1/auth",
-    timeout: 60 * 1000 * 1.5, // 15s,
+    baseURL: "https://api-sta.breezemm.com/v1",
+    timeout: 60 * 1000, // 15s,
     timeoutErrorMessage: "Connection time out by custom",
 });
 
