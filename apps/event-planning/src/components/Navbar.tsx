@@ -46,7 +46,7 @@ const Navbar = () => {
             {path === "/public-timeline" && (
                 <AppNavigation
                     onOpenModal={() => setOpenModal(true)}
-                    className="flex md:hidden justify-center items-center gap-11 py-2 px-6 fixed bottom-0 pb-10 bg-white border-t w-[375px]"
+                    className="flex md:hidden justify-center items-center gap-11 py-2 px-6 fixed bottom-0 pb-10 bg-white border-t w-full"
                 />
             )}
 
@@ -59,7 +59,7 @@ const Navbar = () => {
                 {path === "/public-timeline" && (
                     <AppNavigation
                         onOpenModal={() => setOpenModal(true)}
-                        className="hidden md:flex items-center gap-[47px] px-9 ml-[6rem]"
+                        className="hidden md:flex w-[375px] items-center gap-[47px] px-9 ml-[6rem]"
                     />
                 )}
 

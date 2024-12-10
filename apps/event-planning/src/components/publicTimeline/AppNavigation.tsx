@@ -14,13 +14,12 @@ const AppNavigation = ({ className, onOpenModal }: AppNavigationProps) => {
                 <li
                     onClick={onOpenModal}
                     key={nav.alt}
-                    className="block cursor-pointer"
+                    className="block cursor-pointer w-24 h-22"
                 >
                     <Image
                         src={nav.iconSrc}
                         alt={nav.alt}
-                        width={24}
-                        height={22}
+                        className="w-auto h-auto"
                     />
                 </li>
             ))}
