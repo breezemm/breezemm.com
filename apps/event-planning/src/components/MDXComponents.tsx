@@ -69,20 +69,29 @@ export const MDXComponents = {
     p: ({ className, ...props }) => (
         <p
             className={cn(
-                "tracking-tighter leading-[24px] text-[16px]",
+                "tracking-[-0.016em] leading-[24px] font-[400] text-[16px]",
                 className
             )}
             {...props}
         />
     ),
     ul: ({ className, ...props }) => (
-        <ul className={cn("my-6 ml-6 list-disc", className)} {...props} />
+        <ul
+            className={cn(
+                "my-6 leading-[24px] tracking-[-0.016em] ml-6 list-disc",
+                className
+            )}
+            {...props}
+        />
     ),
     ol: ({ className, ...props }) => (
         <ol className={cn("my-6 ml-6 list-decimal", className)} {...props} />
     ),
     li: ({ className, ...props }) => (
-        <li className={cn("mt-2", className)} {...props} />
+        <li
+            className={cn("mt-2 leading-[24px] tracking-[-0.016em]", className)}
+            {...props}
+        />
     ),
     strong: ({ className, ...props }) => (
         <strong
