@@ -24,15 +24,17 @@ const Footer = () => {
                 {/* Contact Info  */}
                 <div className="flex flex-col gap-[8px]">
                     {contactInfo.map((c) => (
-                        <div key={c.text} className="flex gap-[16px] p-[8px]">
-                            <div className="w-[19px] h-[19px]">
-                                <Image
-                                    src={c.icon}
-                                    alt={c.text}
-                                    className="w-auto h-auto"
-                                />
-                            </div>
-                            <p>{c.text}</p>
+                        <div
+                            key={c.text}
+                            className="flex gap-[16px] items-center p-[8px]"
+                        >
+                            <Image
+                                src={c.icon}
+                                alt={c.text}
+                                width={19}
+                                height={19}
+                            />
+                            <p className="pb-[1px]">{c.text}</p>
                         </div>
                     ))}
                 </div>
