@@ -25,6 +25,7 @@ const PostCard = ({ data }: PostCardProps) => {
                     alt={data.name}
                     width={278}
                     height={120}
+                    priority={false}
                     className="text-black bg-black rounded-t-md"
                 />
                 <p className="px-2 pt-2 font-[600] leading-[24px] tracking-[-0.016em]">
