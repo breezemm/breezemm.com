@@ -7,7 +7,7 @@ export const MDXComponents = {
         <h1
             className={cn(
                 "my-10  text-[32px] font-bold tracking-tighter",
-                className
+                className,
             )}
             {...props}
         />
@@ -16,7 +16,7 @@ export const MDXComponents = {
         <h2
             className={cn(
                 "mt-10 pb-1 text-[18px] font-[700] tracking-tighter first:mt-0",
-                className
+                className,
             )}
             {...props}
         />
@@ -25,7 +25,7 @@ export const MDXComponents = {
         <h3
             className={cn(
                 "mt-8 scroll-m-20 text-xl font-semibold tracking-tight",
-                className
+                className,
             )}
             {...props}
         />
@@ -34,7 +34,7 @@ export const MDXComponents = {
         <h4
             className={cn(
                 "mt-8 scroll-m-20 text-xl font-semibold tracking-tight",
-                className
+                className,
             )}
             {...props}
         />
@@ -43,7 +43,7 @@ export const MDXComponents = {
         <h5
             className={cn(
                 "mt-8 scroll-m-20 text-lg font-semibold tracking-tight",
-                className
+                className,
             )}
             {...props}
         />
@@ -52,7 +52,7 @@ export const MDXComponents = {
         <h6
             className={cn(
                 "mt-8 scroll-m-20 text-base font-semibold tracking-tight",
-                className
+                className,
             )}
             {...props}
         />
@@ -61,7 +61,7 @@ export const MDXComponents = {
         <a
             className={cn(
                 "font-medium underline text-blue-500 underline-offset-4",
-                className
+                className,
             )}
             {...props}
         />
@@ -70,7 +70,7 @@ export const MDXComponents = {
         <p
             className={cn(
                 "tracking-[-0.016em] leading-[24px] font-[400] text-[16px]",
-                className
+                className,
             )}
             {...props}
         />
@@ -79,7 +79,7 @@ export const MDXComponents = {
         <ul
             className={cn(
                 "my-6 leading-[24px] tracking-[-0.016em] ml-6 list-disc",
-                className
+                className,
             )}
             {...props}
         />
@@ -103,7 +103,7 @@ export const MDXComponents = {
         <blockquote
             className={cn(
                 "mt-6 border-l-2 pl-6 italic [&>*]:text-muted-foreground",
-                className
+                className,
             )}
             {...props}
         />
@@ -141,7 +141,7 @@ export const MDXComponents = {
         <th
             className={cn(
                 "border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right",
-                className
+                className,
             )}
             {...props}
         />
@@ -150,7 +150,7 @@ export const MDXComponents = {
         <td
             className={cn(
                 "border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right",
-                className
+                className,
             )}
             {...props}
         />
@@ -159,7 +159,7 @@ export const MDXComponents = {
         <pre
             className={cn(
                 "mb-4 mt-6 overflow-x-auto rounded-lg border bg-black py-4",
-                className
+                className,
             )}
             {...props}
         />
@@ -168,7 +168,7 @@ export const MDXComponents = {
         <code
             className={cn(
                 "relative rounded border px-[0.3rem] py-[0.2rem] font-mono text-sm",
-                className
+                className,
             )}
             {...props}
         />

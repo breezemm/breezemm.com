@@ -1,0 +1,15 @@
+{
+    "name": "@breezemm/prettier-config",
+    "version": "0.0.0",
+    "main": "./index.cjs",
+    "license": "MIT",
+    "scripts": {
+      "clean": "rimraf node_modules"
+    },
+    "dependencies": {
+      "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+      "prettier": "^3.3.3",
+      "prettier-plugin-tailwindcss": "^0.6.9"
+    },
+    "devDependencies": {}
+}

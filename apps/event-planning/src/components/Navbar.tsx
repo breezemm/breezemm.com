@@ -11,23 +11,29 @@ import Modal from "./models/Modal";
 const Navbar = () => {
     const [openModal, setOpenModal] = useState(false);
 
-    const memoizedBreezeButton = useMemo(() => (
-        <BreezeButton
-            onClick={() => setOpenModal(true)}
-            className="hidden md:block w-[170px] py-[10px] px-[32px] font-[600] h-[44px]"
-        >
-            Download Free
-        </BreezeButton>
-    ), [setOpenModal]);
+    const memoizedBreezeButton = useMemo(
+        () => (
+            <BreezeButton
+                onClick={() => setOpenModal(true)}
+                className="hidden md:block w-[170px] py-[10px] px-[32px] font-[600] h-[44px]"
+            >
+                Download Free
+            </BreezeButton>
+        ),
+        [setOpenModal],
+    );
 
-    const memoizedImage = useMemo(() => (
-        <Image
-            src={downloadIcon}
-            alt="download icon"
-            width={24}
-            height={24}
-        />
-    ), [downloadIcon]);
+    const memoizedImage = useMemo(
+        () => (
+            <Image
+                src={downloadIcon}
+                alt="download icon"
+                width={24}
+                height={24}
+            />
+        ),
+        [downloadIcon],
+    );
 
     return (
         <React.Fragment>

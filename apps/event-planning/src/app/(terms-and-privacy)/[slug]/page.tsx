@@ -15,7 +15,7 @@ const getMdxData = async (slug: string) => {
     const filePath = path.join(
         process.cwd(),
         "src/mdx-contents",
-        `${slug}.mdx`
+        `${slug}.mdx`,
     );
     const content = await fs.readFile(filePath, "utf-8");
     const data = await compileMDX({
