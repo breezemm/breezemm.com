@@ -5,14 +5,11 @@ import { compileMDX } from "next-mdx-remote/rsc";
 import { MDXComponents } from "../../../components/MDXComponents";
 import { Figtree } from "next/font/google";
 
-// font setup.
 const figtree = Figtree({
-    weight: ["300", "500", "600", "700"],
+    weight: ["300", "400", "500", "600", "700"],
     subsets: ["latin"],
 });
 
-// utils func to retreat mdx content and frontmatter for meta data.
-// can be split up into another file.
 const getMdxData = async (slug: string) => {
     if (!slug) return;
     const filePath = path.join(
@@ -26,20 +23,19 @@ const getMdxData = async (slug: string) => {
         options: {
             parseFrontmatter: true,
         },
-        components: MDXComponents, // to display mdx content with custom components.
+        components: MDXComponents,
     });
 
     return data;
 };
 
-// get the slug and generate meta data.
 export const generateMetadata = async ({
     params,
 }: {
     params: { slug: string };
 }) => {
     try {
-        const { slug } = await params; // to get rid of the warning.
+        const { slug } = await params;
         const { frontmatter } = await getMdxData(slug);
         return {
             title: frontmatter.title,
@@ -55,9 +51,8 @@ export const generateMetadata = async ({
 };
 
 const page = async ({ params }: { params: { slug: string } }) => {
-    // get the mdx content and display with MDX component.
     try {
-        const { slug } = await params; // to get rid of the waring.
+        const { slug } = await params;
         const { content } = await getMdxData(slug);
         return (
             <div className="flex justify-center items-center mb-[260px] mt-[80px]">
