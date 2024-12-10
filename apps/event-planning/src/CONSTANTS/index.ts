@@ -33,4 +33,4 @@ export const socialMedias = [
     telegramIcon,
 ];
 
-export const AUTH_PREFIX = "/auth"
+export const AUTH_PREFIX = "/auth";

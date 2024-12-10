@@ -14,7 +14,7 @@ axiosBase.interceptors.request.use(
     },
     (error) => {
         throw error;
-    }
+    },
 );
 
 axiosBase.interceptors.response.use((config) => {
@@ -31,7 +31,7 @@ type GlobalRequest = {
 };
 const get = async <T extends GlobalResponse>(
     url: string,
-    config?: AxiosRequestConfig
+    config?: AxiosRequestConfig,
 ) => {
     try {
         const result: AxiosResponse<T> = await axiosBase.get(url, config);
@@ -45,13 +45,13 @@ const get = async <T extends GlobalResponse>(
 const post = async <T extends GlobalRequest, D extends GlobalResponse>(
     url: string,
     reqData: T,
-    config?: AxiosRequestConfig
+    config?: AxiosRequestConfig,
 ) => {
     try {
         const result: AxiosResponse<D, T> = await axiosBase.post(
             url,
             reqData,
-            config
+            config,
         );
         return result.data;
     } catch (err) {

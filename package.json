@@ -4,10 +4,12 @@
   "scripts": {
     "build": "turbo run build --filter=@breezemm/event-planning",
     "dev": "turbo run dev --filter=@breezemm/event-planning",
-    "start": "turbo run start --filter=@breezemm/event-planning"
+    "start": "turbo run start --filter=@breezemm/event-planning",
+    "format": "prettier --write \"**/*.{js,jsx,cjs,mjs,ts,tsx,cts,mts,mdx}\""
   },
   "devDependencies": {
     "@types/bun": "latest",
+    "prettier": "^3.4.2",
     "turbo": "^1.13.4"
   },
   "peerDependencies": {
@@ -20,7 +22,8 @@
   },
   "name": "@breezemm/root",
   "workspaces": [
-    "apps/*"
+    "apps/*",
+    "packages/*"
   ],
   "overrides": {
     "next": "15.0.4"
