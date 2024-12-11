@@ -32,7 +32,7 @@ const getMdxData = async (slug: string) => {
 export const generateMetadata = async ({
     params,
 }: {
-    params: { slug: string };
+    params: Promise<{ slug: string }>;
 }) => {
     try {
         const { slug } = await params;
@@ -50,7 +50,7 @@ export const generateMetadata = async ({
     }
 };
 
-const page = async ({ params }: { params: { slug: string } }) => {
+const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
     try {
         const { slug } = await params;
         const { content } = await getMdxData(slug);
