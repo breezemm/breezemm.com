@@ -1,0 +1,26 @@
+name: 01_staging_deploy
+
+on: [push, pull_request]
+
+jobs:
+  deploy:
+    name: Staging Deployment
+    runs-on: ubuntu-latest
+    steps:
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$SSH_KEY" > ~/.ssh/breezemm.key
+          chmod 600 ~/.ssh/breezemm.key
+          cat >>~/.ssh/config <<END
+            Host breezemm
+            HostName ${{ secrets.HOST }}
+            User breezemm
+            IdentityFile ~/.ssh/breezemm.key
+            StrictHostKeyChecking no
+          END
+        env:
+          SSH_KEY: ${{ secrets.PRIVATE_KEY }}
+
+      - name: Deploy
+        run: ssh breezemm '/usr/local/bin/devops/breezemm_web.sh'
