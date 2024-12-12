@@ -37,7 +37,8 @@ const Navbar = () => {
                 height={24}
             />
         ),
-        [downloadIcon]
+        
+        [downloadIcon],
     );
 
     return (

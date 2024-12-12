@@ -15,7 +15,7 @@ const getMdxData = async (slug: string) => {
     const filePath = path.join(
         process.cwd(),
         "src/mdx-contents",
-        `${slug}.mdx`
+        `${slug}.mdx`,
     );
     const content = await fs.readFile(filePath, "utf-8");
     const data = await compileMDX({
@@ -32,7 +32,7 @@ const getMdxData = async (slug: string) => {
 export const generateMetadata = async ({
     params,
 }: {
-    params: { slug: string };
+    params: Promise<{ slug: string }>;
 }) => {
     try {
         const { slug } = await params;
@@ -50,7 +50,7 @@ export const generateMetadata = async ({
     }
 };
 
-const page = async ({ params }: { params: { slug: string } }) => {
+const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
     try {
         const { slug } = await params;
         const { content } = await getMdxData(slug);
