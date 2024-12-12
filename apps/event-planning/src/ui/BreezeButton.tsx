@@ -1,6 +1,6 @@
-import { Figtree } from "next/font/google";
 import React from "react";
 
+import { Figtree } from "next/font/google";
 const figtree = Figtree({ weight: ["300", "500", "600"], subsets: ["latin"] });
 
 const BreezeButton = ({

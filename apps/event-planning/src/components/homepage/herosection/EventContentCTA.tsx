@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 
 import BreezeButton from "../../../ui/BreezeButton";
-import downloadIcon from "../../../icons/download-icon.svg";
-import flag from "../../../icons/flag.svg";
+import downloadIcon from "../../../icons/assets-icons/download-icon.svg";
+import flag from "../../../icons/assets-icons/flag.svg";
 import Modal from "../../models/Modal";
 
 const EventContentCTA = () => {

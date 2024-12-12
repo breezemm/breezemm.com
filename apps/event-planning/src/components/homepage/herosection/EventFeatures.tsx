@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import checkIcon from "../../../icons/check-icon.svg";
+import checkIcon from "../../../icons/assets-icons/check-icon.svg";
 import BreezeButton from "../../../ui/BreezeButton";
 import { Figtree } from "next/font/google";
 

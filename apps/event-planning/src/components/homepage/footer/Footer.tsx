@@ -1,12 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-
-import breezeHLogo from "../../../icons/breeze-h-logo.svg";
-import appStoreSVG from "../../../icons/apple-store.svg";
-import googlePlayStoreSVG from "../../../icons/google-play-store.svg";
-
-import { contactInfo, socialMedias } from "../../../CONSTANTS";
+import breezeHLogo from "../../../icons/breeze-logos/breeze-h-logo.svg";
+import { appStoreIcons, contactInfo, socialMedias } from "../../../CONSTANTS";
 
 const Footer = () => {
     return (
@@ -28,13 +24,14 @@ const Footer = () => {
                             key={c.text}
                             className="flex gap-[16px] items-center p-[8px]"
                         >
-                            <Image
-                                src={c.icon}
-                                alt={c.text}
-                                width={19}
-                                height={19}
-                            />
-                            <p className="pb-[1px]">{c.text}</p>
+                            <div className="w-[19px] h-[19px]">
+                                <Image
+                                    src={c.icon}
+                                    alt={c.text}
+                                    className="w-auto h-auto"
+                                />
+                            </div>
+                            <p>{c.text}</p>
                         </div>
                     ))}
                 </div>
@@ -43,16 +40,14 @@ const Footer = () => {
             {/* app download and social media */}
             <div className="flex flex-col lg:items-end items-center gap-[72px] md:gap-[40px]">
                 <div className="flex gap-[16px] items-center">
-                    <Image
-                        src={appStoreSVG}
-                        alt="app store"
-                        className="w-auto h-auto"
-                    />
-                    <Image
-                        src={googlePlayStoreSVG}
-                        alt="google play store"
-                        className="w-auto h-auto"
-                    />
+                    {appStoreIcons.map((store) => (
+                        <Image
+                            key={store.alt}
+                            src={store.src}
+                            alt={store.alt}
+                            className="w-auto h-auto"
+                        />
+                    ))}
                 </div>
 
                 <div className="flex gap-[40px] items-center">

@@ -5,11 +5,16 @@ import Image from "next/image";
 
 import BreezeLogo from "../ui/BreezeLogo";
 import BreezeButton from "../ui/BreezeButton";
-import downloadIcon from "../icons/download-icon.svg";
+
+import downloadIcon from "../icons/assets-icons/download-icon.svg";
 import Modal from "./models/Modal";
+import { usePathname } from "next/navigation";
+import AppNavigation from "./publicTimeline/AppNavigation";
 
 const Navbar = () => {
     const [openModal, setOpenModal] = useState(false);
+
+    const path = usePathname();
 
     const memoizedBreezeButton = useMemo(
         () => (
@@ -20,7 +25,7 @@ const Navbar = () => {
                 Download Free
             </BreezeButton>
         ),
-        [setOpenModal],
+        [setOpenModal]
     );
 
     const memoizedImage = useMemo(
@@ -32,15 +37,32 @@ const Navbar = () => {
                 height={24}
             />
         ),
+        
         [downloadIcon],
     );
 
     return (
         <React.Fragment>
+            {/* mobile app navigation   */}
+            {path === "/public-timeline" && (
+                <AppNavigation
+                    onOpenModal={() => setOpenModal(true)}
+                    className="flex md:hidden justify-center items-center gap-11 py-2 px-6 fixed bottom-0 pb-10 bg-white border-t w-full"
+                />
+            )}
+
             <nav className="flex sticky top-0 bg-white/50 z-20 shadow-sm backdrop-blur-md items-center justify-between py-[16px] px-[24px] md:py-[24px] md:px-[40px]">
                 <Link href="/">
                     <BreezeLogo />
                 </Link>
+
+                {/* App Navigation  */}
+                {path === "/public-timeline" && (
+                    <AppNavigation
+                        onOpenModal={() => setOpenModal(true)}
+                        className="hidden md:flex w-[375px] items-center gap-[47px] px-9 ml-[6rem]"
+                    />
+                )}
 
                 {memoizedBreezeButton}
 
