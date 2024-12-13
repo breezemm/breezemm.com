@@ -1,30 +1,24 @@
-import React from "react";
-import { appNavigation } from "../../CONSTANTS";
-import Image from "next/image";
+import React from 'react';
+
+import Image from 'next/image';
+
+import { appNavigation } from '../../CONSTANTS';
 
 type AppNavigationProps = {
-    className: string;
-    onOpenModal: () => void;
+  className: string;
+  onOpenModal: () => void;
 };
 
 const AppNavigation = ({ className, onOpenModal }: AppNavigationProps) => {
-    return (
-        <ul className={className}>
-            {appNavigation.map((nav) => (
-                <li
-                    onClick={onOpenModal}
-                    key={nav.alt}
-                    className="block cursor-pointer w-24 h-22"
-                >
-                    <Image
-                        src={nav.iconSrc}
-                        alt={nav.alt}
-                        className="w-auto h-auto"
-                    />
-                </li>
-            ))}
-        </ul>
-    );
+  return (
+    <ul className={className}>
+      {appNavigation.map((nav) => (
+        <li onClick={onOpenModal} key={nav.alt} className="h-22 block w-24 cursor-pointer">
+          <Image src={nav.iconSrc} alt={nav.alt} className="h-auto w-auto" />
+        </li>
+      ))}
+    </ul>
+  );
 };
 
 export default AppNavigation;

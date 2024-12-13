@@ -17,9 +17,8 @@ module.exports = {
   ],
   importOrderSeparation: true,
   importOrderSortSpecifiers: true,
-  // !: Waiting for these to make it upstream
-  // importOrderMergeDuplicateImports: true,
-  // importOrderCombineTypeAndValueImports: true,
 
   plugins: ['@trivago/prettier-plugin-sort-imports', 'prettier-plugin-tailwindcss'],
+
+  overrides: [],
 };

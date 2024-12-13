@@ -1,25 +1,25 @@
-import React from "react";
+import React from 'react';
 
-import UserProfile from "./UserProfile";
-import PostCard from "./PostCard";
-import { PostTypes } from "../../types";
+import { PostTypes } from '../../types';
+import PostCard from './PostCard';
+import UserProfile from './UserProfile';
 
 type PostPropTypes = {
-    data: PostTypes;
+  data: PostTypes;
 };
 
 const Post = ({ data }: PostPropTypes) => {
-    return (
-        <div className="flex flex-col border-b-4 px-6 border-[#E5E6E6]">
-            {data.friend_comment && (
-                <p className="py-4 w-[278px] self-end">
-                    <strong>La Pyae </strong>comment on this.
-                </p>
-            )}
-            <UserProfile userData={data.user} />
-            <PostCard data={data} />
-        </div>
-    );
+  return (
+    <div className="flex flex-col border-b-4 border-[#E5E6E6] px-6">
+      {data.friend_comment && (
+        <p className="w-[278px] self-end py-4">
+          <strong>La Pyae </strong>comment on this.
+        </p>
+      )}
+      <UserProfile userData={data.user} />
+      <PostCard data={data} />
+    </div>
+  );
 };
 
 export default Post;

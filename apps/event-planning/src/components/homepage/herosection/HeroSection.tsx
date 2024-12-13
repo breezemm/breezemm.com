@@ -1,14 +1,15 @@
-import React from "react";
-import EventContentSection from "./EventContentSection";
-import EventFeatures from "./EventFeatures";
+import React from 'react';
+
+import EventContentSection from './EventContentSection';
+import EventFeatures from './EventFeatures';
 
 const HeroSection = () => {
-    return (
-        <div className="flex flex-col items-center mb-[160px] lg:mb-[260px] gap-[260px]">
-            <EventContentSection />
-            <EventFeatures />
-        </div>
-    );
+  return (
+    <div className="mb-[160px] flex flex-col items-center gap-[260px] lg:mb-[260px]">
+      <EventContentSection />
+      <EventFeatures />
+    </div>
+  );
 };
 
 export default HeroSection;
