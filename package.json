@@ -16,7 +16,6 @@
     "node": ">=18.0.0"
   },
   "devDependencies": {
-    "@types/bun": "latest",
     "prettier": "^3.4.2",
     "rimraf": "^6.0.1",
     "turbo": "^1.13.4"
