@@ -1,6 +1,10 @@
 name: 01_staging_deploy
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - staging
+  pull_request:
 
 jobs:
   deploy:
