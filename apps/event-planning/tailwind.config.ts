@@ -26,7 +26,5 @@ const path = require('path');
 
 module.exports = {
   ...baseConfig,
-  content: [
-    ...baseConfig.content,
-  ],
+  content: [...baseConfig.content],
 };
