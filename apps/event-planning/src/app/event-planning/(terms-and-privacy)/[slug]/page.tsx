@@ -6,7 +6,7 @@ import { promises as fs } from 'fs';
 import { compileMDX } from 'next-mdx-remote/rsc';
 import path from 'path';
 
-import { MDXComponents } from '../../../components/MDXComponents';
+import { MDXComponents } from '@/components/MDXComponents';
 
 const figtree = Figtree({
   weight: ['300', '400', '500', '600', '700'],

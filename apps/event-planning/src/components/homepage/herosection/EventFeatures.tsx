@@ -3,8 +3,8 @@ import React from 'react';
 import { Figtree } from 'next/font/google';
 import Image from 'next/image';
 
-import checkIcon from '../../../icons/assets-icons/check-icon.svg';
-import BreezeButton from '../../../ui/BreezeButton';
+import checkIcon from '@/icons/assets-icons/check-icon.svg';
+import BreezeButton from '@/ui/BreezeButton';
 
 const figtree = Figtree({ weight: ['300', '500', '600'], subsets: ['latin'] });
 const EventFeatures = () => {
