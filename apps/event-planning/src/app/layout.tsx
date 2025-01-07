@@ -1,7 +1,8 @@
 import React from 'react';
 
-import Navbar from '../components/Navbar';
-import Footer from '../components/homepage/footer/Footer';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/homepage/footer/Footer';
+
 import './globals.css';
 
 export const metadata = {

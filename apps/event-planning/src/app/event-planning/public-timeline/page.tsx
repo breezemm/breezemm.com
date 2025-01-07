@@ -2,8 +2,8 @@ import React from 'react';
 
 import { Figtree } from 'next/font/google';
 
-import { POST_DUMMY_DATA } from '../../CONSTANTS';
-import Post from '../../components/publicTimeline/Post';
+import { POST_DUMMY_DATA } from '@/CONSTANTS';
+import Post from '@/components/publicTimeline/Post';
 
 const figtree = Figtree({ weight: ['300', '500', '600'], subsets: ['latin'] });
 
