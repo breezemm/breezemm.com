@@ -12,7 +12,7 @@ const nextConfig = {
         destination: '/event-planning',
         permanent: true,
       },
-    ]
+    ];
   },
 };
 

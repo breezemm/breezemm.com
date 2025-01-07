@@ -4,10 +4,10 @@ import React, { useState } from 'react';
 
 import Image from 'next/image';
 
+import Modal from '@/components/models/Modal';
 import downloadIcon from '@/icons/assets-icons/download-icon.svg';
 import flag from '@/icons/assets-icons/flag.svg';
 import BreezeButton from '@/ui/BreezeButton';
-import Modal from '@/components/models/Modal';
 
 const EventContentCTA = () => {
   const [openModal, setOpenModal] = useState(false);
