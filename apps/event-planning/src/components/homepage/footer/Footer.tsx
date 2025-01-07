@@ -3,8 +3,8 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { appStoreIcons, contactInfo, socialMedias } from '../../../CONSTANTS';
-import breezeHLogo from '../../../icons/breeze-logos/breeze-h-logo.svg';
+import { appStoreIcons, contactInfo, socialMedias } from '@/CONSTANTS';
+import breezeHLogo from '@/icons/breeze-logos/breeze-h-logo.svg';
 
 const Footer = () => {
   return (
@@ -43,10 +43,10 @@ const Footer = () => {
         </div>
 
         <div className="flex items-center gap-[24px] text-[#FCFCFC]">
-          <Link className="underline" href="/terms-and-conditions">
+          <Link className="underline" href="/event-planning/terms-and-conditions">
             Terms & Conditions
           </Link>
-          <Link className="underline" href="/privacy-policy">
+          <Link className="underline" href="/event-planning/privacy-policy">
             Privacy Policy
           </Link>
         </div>

@@ -3,8 +3,8 @@ import React from 'react';
 import { Sora } from 'next/font/google';
 import Image from 'next/image';
 
-import celebrate from '../../../icons/assets-icons/celebrate.svg';
-import magnifyingGlass from '../../../icons/assets-icons/magnifying-glass.svg';
+import celebrate from '@/icons/assets-icons/celebrate.svg';
+import magnifyingGlass from '@/icons/assets-icons/magnifying-glass.svg';
 
 const sora = Sora({
   weight: ['300', '400', '500', '600', '700'],
