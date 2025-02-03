@@ -3,7 +3,6 @@ import React from 'react';
 import { Figtree } from 'next/font/google';
 import Image from 'next/image';
 
-import { AUTH_PREFIX } from '@/CONSTANTS';
 import { httpClient } from '@/utils/httpClient';
 
 const figtree = Figtree({ weight: ['300', '500', '600'], subsets: ['latin'] });
@@ -19,7 +18,7 @@ type ResponseModel = {
 };
 
 const getData = async () => {
-  return await httpClient.get<ResponseModel>(`${AUTH_PREFIX}/interests`);
+  return await httpClient.get<ResponseModel>(`interests`);
 };
 
 const EventCategories = async () => {
