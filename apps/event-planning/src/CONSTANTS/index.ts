@@ -78,5 +78,3 @@ export const POST_DUMMY_DATA = [
     friend_comment: false,
   },
 ];
-
-export const AUTH_PREFIX = 'auth';
